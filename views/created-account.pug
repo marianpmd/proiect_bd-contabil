@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    p(class="pTitle") New account added :
+    table(class="table is-striped is-hoverable is-fullwidth")
+        thead
+            tr(class="tr")
+                th Number
+                th Type
+                th Initial Balance
+                th Balance
+                th Description
+        tbody(class="tbody")
+            tr(class="tr")
+                td #{data.number}
+                td #{data.type}
+                td #{data.initial_balance}
+                td #{data.balance}
+                td #{data.description}

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    form(id="account" action="/add/account" method="post" class="form")
+        input(type="text", name="number", value="", placeholder="Number", class="input")
+        br
+        input(type="text", name="type", value="", placeholder="Type", class="input")
+        br
+        input(type="text", name="initial_balance", value="", placeholder="Initial Balance", class="input")
+        br
+        input(type="text", name="balance", value="", placeholder="Balance", class="input")
+        br
+        input(type="text", name="description", value="", placeholder="Description", class="input")
+        br
+        input(type="submit" value="Add Account" class="button send-button")

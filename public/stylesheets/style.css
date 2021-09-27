@@ -1,0 +1,66 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+html{
+  background-color: rgb(33, 31, 31);
+}
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  border-color: #111 #111 aqua #111;;
+  border-width: 2px;
+  border-style: solid;
+
+
+}
+
+
+.sidenav a:hover {
+  color: aqua;
+}
+
+body {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+.table th{
+  background-color: rgb(33, 31, 31);
+  color: aqua;
+}
+
+.table tbody tr:hover{
+  color: aqua;
+}
+
+
+.form .send-button{
+  margin-top: 10px;
+}
+
+.form .send-button:hover{
+ color: aqua;
+}
+.pTitle{
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

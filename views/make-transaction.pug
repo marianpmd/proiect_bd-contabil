@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    form(id="transaction" action="/make/transaction" method="post" class="form")
+        label(for="number1") Account No.1
+        input(id="number1", type="text", name="number1", value="", placeholder="Number", class="input")
+        br
+        label(for="number2") Account No.2
+        input(id="number2", type="text", name="number2", value="", placeholder="Number", class="input")
+        br
+        label(for="number") Number
+        input(id="number", type="text", name="number", value="", placeholder="Number", class="input")
+        br
+        label(for="amount") Amount
+        input(id="amount", type="text", name="amount", value="", placeholder="Number", class="input")
+        br
+        label(for="description") Description
+        input(id="description", type="text", name="description", value="", placeholder="Number", class="input")
+        br
+
+
+        input(type="submit" value="Make Transaction" class="button send-button")
