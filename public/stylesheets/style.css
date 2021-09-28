@@ -2,6 +2,8 @@
 
 html{
   background-color: rgb(33, 31, 31);
+  width: 100%;
+  height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -36,7 +38,7 @@ html{
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 6px 8px 6px 8px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -67,6 +69,7 @@ body {
 }
 .input{
   background-color: #1a1a1a;
+  color: #818181;
   border: 0;
 }
 
@@ -93,6 +96,19 @@ table.table tr:hover td {
   color: white;
 }
 
+.form{
+  width: 300px;
+}
+
+#form1{
+  position: relative;
+}
+
+.form #col1-button{
+  position: absolute;
+  bottom: 12px;
+}
+
 .form .send-button{
   margin-top: 10px;
   font-weight: bold;
@@ -105,6 +121,20 @@ table.table tr:hover td {
   font-size: 25px;
   padding: 10px 10px 10px 10px;
 }
+
+#top-div{
+  padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
 
@@ -113,6 +143,7 @@ table.table tr:hover td {
     width: 75%;
   }
   .sidenav a {
+    width: 80%;
 
   }
 

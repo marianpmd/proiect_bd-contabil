@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    div(class="columns is-variable is-3 is-multiline is-desktop" id="top-div")
+        div(class="column" id="form1")
+            form(id="transaction" action="/find/transactions" method="get" class="form")
+                label(for="number") Account No#
+                input(id="number", type="text", name="number", value="", placeholder="...", class="input" required)
+                br
+                input(type="submit" value="Show Transactions" class="button send-button" id="col1-button")
+
+        div(class="column")
+            form(id="byDate" action="/find/transactions/byDate" method="get" class="form")
+                label(for="date1") Date #1
+                input(id="date1", type="date", name="date1", value="", placeholder="...", class="input" required)
+                br
+                label(for="date2") Date#2
+                input(id="date2", type="date", name="date2", value="", placeholder="...", class="input" required)
+                br
+                input(type="submit" value="Show Transactions" class="button send-button")

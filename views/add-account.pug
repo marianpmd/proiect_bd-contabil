@@ -2,14 +2,19 @@ extends layout
 
 block content
     form(id="account" action="/add/account" method="post" class="form")
-        input(type="text", name="number", value="", placeholder="Number", class="input")
+        label(for="number") Number
+        input(id="number" type="text", name="number", value="", placeholder="...", class="input" required)
         br
-        input(type="text", name="type", value="", placeholder="Type", class="input")
+        label(for="type") Type
+        input(id="type" type="text", name="type", value="", placeholder="...", class="input" required)
         br
-        input(type="text", name="initial_balance", value="", placeholder="Initial Balance", class="input")
+        label(for="initial_balance") Initial Balance
+        input(id="initial_balance" type="text", name="initial_balance", value="", placeholder="...", class="input" required)
         br
-        input(type="text", name="balance", value="", placeholder="Balance", class="input")
+        label(for="balance") Balance
+        input(id="balance" type="text", name="balance", value="", placeholder="...", class="input" required)
         br
-        input(type="text", name="description", value="", placeholder="Description", class="input")
+        label(for="description") Description
+        input(id="description" type="text", name="description", value="", placeholder="...", class="input" required)
         br
         input(type="submit" value="Add Account" class="button send-button")

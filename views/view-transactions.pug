@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    table(class="table is-striped is-hoverable is-fullwidth")
+        thead
+            tr(class="tr")
+                th Number
+                th Date
+                th Amount
+                th Description
+        tbody(class="tbody")
+        for item in data
+            tr(class="tr")
+                td #{item.number}
+                td #{item.date}
+                td #{item.amount}
+                td #{item.description}
