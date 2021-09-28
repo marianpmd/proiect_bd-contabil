@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    div(class="columns is-variable is-3 is-multiline is-desktop" id="top-div")
+    div(class="columns is-variable is-3-desktop is-multiline is-desktop" id="top-div")
         div(class="column" id="form1")
             form(id="transaction" action="/find/transactions" method="get" class="form")
                 label(for="number") Account No#
@@ -18,3 +18,13 @@ block content
                 input(id="date2", type="date", name="date2", value="", placeholder="...", class="input" required)
                 br
                 input(type="submit" value="Show Transactions" class="button send-button")
+        div(class="column")
+            div(class="drop")
+                button(class="dropbtn button") Pick the type...
+                div(class="drop-content")
+                    a AC
+                    br
+                    a CA
+                    br
+                    a PA
+
