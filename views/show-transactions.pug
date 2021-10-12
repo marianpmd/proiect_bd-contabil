@@ -2,12 +2,12 @@ extends layout
 
 block content
     div(class="columns is-variable is-3-desktop is-multiline is-desktop" id="top-div")
-        div(class="column" id="form1")
+        div(class="column")
             form(id="transaction" action="/find/transactions" method="get" class="form")
                 label(for="number") Account No#
                 input(id="number", type="text", name="number", value="", placeholder="...", class="input" required)
                 br
-                input(type="submit" value="Show Transactions" class="button send-button" id="col1-button")
+                input(type="submit" value="Show Transactions" class="button send-button")
 
         div(class="column")
             form(id="byDate" action="/find/transactions/byDate" method="get" class="form")
@@ -19,12 +19,11 @@ block content
                 br
                 input(type="submit" value="Show Transactions" class="button send-button")
         div(class="column")
-            div(class="drop")
-                button(class="dropbtn button") Pick the type...
-                div(class="drop-content")
-                    a AC
-                    br
-                    a CA
-                    br
-                    a PA
-
+            form(id="byType" action="/find/transactions/byType" method="get" class="form")
+                label(for="select") Type:
+                br
+                select(id="select" name="type")
+                    option AC
+                    option CA
+                    option PA
+                input(type="submit" value="Show Transactions" class="button send-button")

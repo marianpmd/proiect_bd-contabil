@@ -66,6 +66,11 @@ Transaction.findAllByNumber = (number) => {
             if (err) throw err;
             console.log("one vals")
             console.log(results)
+            if (results.length === 0){
+                console.log("no results")
+                data([]);
+                return;
+            }
 
             sql.query("SELECT number,date,amount,description FROM transaction WHERE id_source = ? OR id_destination = ?", [results[0].id, results[0].id], (err1, res1) => {
                 if (err1) throw err1;
