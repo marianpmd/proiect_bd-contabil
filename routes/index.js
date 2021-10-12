@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-const accountService =     require("../data/account.service")
+const express = require('express');
+const router = express.Router();
+const accountService = require("../data/account.service")
 const transactionService = require("../data/transaction.service")
 
 router.get('/', function(req, res) {
