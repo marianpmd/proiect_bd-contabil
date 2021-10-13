@@ -1,23 +1,25 @@
 extends layout
 
 block content
-    form(id="account" action="/add/account" method="post" class="form")
-        label(for="number") Number
-        input(id="number" type="text", name="number", value="", placeholder="...", class="input" required)
-        br
-        label(for="type") Type
-        select(id="type" name="type" class="input" )
-            option AC
-            option CA
-            option PA
-        br
-        label(for="initial_balance") Initial Balance
-        input(id="initial_balance" type="text", name="initial_balance", value="", placeholder="...", class="input" required)
-        br
-        label(for="balance") Balance
-        input(id="balance" type="text", name="balance", value="", placeholder="...", class="input" required)
-        br
-        label(for="description") Description
-        input(id="description" type="text", name="description", value="", placeholder="...", class="input" required)
-        br
-        input(type="submit" value="Add Account" class="button send-button")
+    div(class="main-form")
+        form(id="account" action="/add/account" method="post" class="form")
+            label(for="number") Number
+            input(id="number" type="text", name="number", value="", placeholder="...", class="input" required)
+            br
+            label(for="type") Type
+            select(id="type" name="type" class="input" )
+                option AC
+                option CA
+                option PA
+            br
+            label(for="initial_balance") Initial Balance
+            input(id="initial_balance" type="text", name="initial_balance", value="", placeholder="...", class="input" required)
+            br
+            label(for="balance") Balance
+            input(id="balance" type="text", name="balance", value="", placeholder="...", class="input" required)
+            br
+            label(for="description") Description
+            input(id="description" type="text", name="description", value="", placeholder="...", class="input" required)
+            br
+            input(type="submit" value="Add Account" class="button send-button")
+        object(data="/images/undraw_Profile_re_4a55.svg" class="svg-filler")

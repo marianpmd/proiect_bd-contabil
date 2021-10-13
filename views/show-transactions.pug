@@ -1,29 +1,31 @@
 extends layout
 
 block content
-    div(class="columns is-variable is-3-desktop is-multiline is-desktop" id="top-div")
-        div(class="column")
-            form(id="transaction" action="/find/transactions" method="get" class="form")
-                label(for="number") Account No#
-                input(id="number", type="text", name="number", value="", placeholder="...", class="input" required)
-                br
-                input(type="submit" value="Show Transactions" class="button send-button")
+    div(class="mainDiv")
+        div(class="columns is-variable is-3-desktop is-multiline is-desktop" id="top-div")
+            div(class="column")
+                form(id="transaction" action="/find/transactions" method="get" class="form")
+                    label(for="number") Account No#
+                    input(id="number", type="text", name="number", value="", placeholder="...", class="input" required)
+                    br
+                    input(type="submit" value="Show Transactions" class="button send-button")
 
-        div(class="column")
-            form(id="byDate" action="/find/transactions/byDate" method="get" class="form")
-                label(for="date1") Date #1
-                input(id="date1", type="date", name="date1", value="", placeholder="...", class="input" required)
-                br
-                label(for="date2") Date#2
-                input(id="date2", type="date", name="date2", value="", placeholder="...", class="input" required)
-                br
-                input(type="submit" value="Show Transactions" class="button send-button")
-        div(class="column")
-            form(id="byType" action="/find/transactions/byType" method="get" class="form")
-                label(for="select") Type:
-                br
-                select(id="select" name="type")
-                    option AC
-                    option CA
-                    option PA
-                input(type="submit" value="Show Transactions" class="button send-button")
+            div(class="column")
+                form(id="byDate" action="/find/transactions/byDate" method="get" class="form")
+                    label(for="date1") Date #1
+                    input(id="date1", type="date", name="date1", value="", placeholder="...", class="input" required)
+                    br
+                    label(for="date2") Date#2
+                    input(id="date2", type="date", name="date2", value="", placeholder="...", class="input" required)
+                    br
+                    input(type="submit" value="Show Transactions" class="button send-button")
+            div(class="column")
+                form(id="byType" action="/find/transactions/byType" method="get" class="form")
+                    label(for="select") Type:
+                    br
+                    select(id="select" name="type")
+                        option AC
+                        option CA
+                        option PA
+                    input(type="submit" value="Show Transactions" class="button send-button")
+        object(data="/images/undraw_wallet_aym5.svg" width=700 height=450)

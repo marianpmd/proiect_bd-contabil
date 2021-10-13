@@ -35,8 +35,8 @@ Transaction.make = (numberOne, numberTwo, number, amount, description) => {
     return new Promise(vals => {
         sql.query("SELECT account.id FROM account WHERE account.number = (?)", numberTwo, ((err, results) => {
             if (err) throw err;
-            values = [results[0].id, ...values];
             console.log("one vals")
+            values = [results[0].id, ...values];
             console.log(values)
         }))
         sql.query("SELECT account.id FROM account WHERE account.number = (?)", numberOne, ((err1, results1) => {
