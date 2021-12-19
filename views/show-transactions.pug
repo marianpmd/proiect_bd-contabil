@@ -9,7 +9,12 @@ block content
                     input(id="number", type="text", name="number", value="", placeholder="...", class="input" required)
                     br
                     input(type="submit" value="Show Transactions" class="button send-button")
-
+            div(class="column")
+                form(id="delete-if-no-transactions" action="/delete" method="get" class="form")
+                    label(for="number1") Account No#
+                    input(id="number1", type="text", name="number1", value="", placeholder="...", class="input" required)
+                    br
+                    input(type="submit" value="Delete If No Transactions" class="button send-button")
             div(class="column")
                 form(id="byDate" action="/find/transactions/byDate" method="get" class="form")
                     label(for="date1") Date #1
@@ -28,4 +33,10 @@ block content
                         option CA
                         option PA
                     input(type="submit" value="Show Transactions" class="button send-button")
+            div(class="column")
+                form(id="most-transactions" action="/most-transactions" method="get" class="form")
+                    input(type="submit" value="Show Most Transactions Account" class="button send-button")
+            div(class="column")
+                form(id="all-balances" action="/total" method="get" class="form")
+                    input(type="submit" value="Show All Balances" class="button send-button")
         object(data="/images/undraw_wallet_aym5.svg" width=700 height=450)

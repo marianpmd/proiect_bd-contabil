@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+    h1(style="color:white") The number of transactions is :
+        p(style="color:white")= data.count
+    div(class="mainDiv")
+        table(class="table is-striped is-hoverable is-fullwidth")
+            thead
+                tr(class="tr")
+                    th Number
+                    th Type
+                    th Initial Balance
+                    th Balance
+                    th Description
+            tbody
+            for item in data.entries
+                tr(class="tr")
+                    td #{item.number}
+                    td #{item.type}
+                    td #{item.initial_balance}
+                    td #{item.balance}
+                    td #{item.description}
+        object(data="/images/undraw_Bitcoin_P2P_re_1xqa.svg")
+

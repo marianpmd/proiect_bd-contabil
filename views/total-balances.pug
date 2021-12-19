@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    div(class="mainDiv")
+        table(class="table is-striped is-hoverable is-fullwidth")
+            thead
+                tr(class="tr")
+                    th Number
+                    th Initial Balance
+                    th Sent Amount
+                    th Received Amount
+            tbody
+            for item in data
+                tr(class="tr")
+                    td #{item.number}
+                    td #{item.initial_balance}
+                    td #{item.sent_amount}
+                    td #{item.received_amount}
+        object(data="/images/undraw_Bitcoin_P2P_re_1xqa.svg")
+

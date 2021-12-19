@@ -1,3 +1,5 @@
+
+
 let transactionModel = require("../data/transaction.model");
 
 exports.makeTransaction = async (numberOne, numberTwo,number, amount,description)=> {
@@ -21,6 +23,17 @@ exports.findAllByNumber = async (number) => {
     })
     console.log("tr res");
     console.log(transactionRes)
+    return transactionRes;
+}
+
+exports.findAllByType = async (type)=> {
+    const transactionRes = await transactionModel.findAllByType(type).catch(err=>{
+        console.log(err);
+    })
+
+    console.log("restults of by type : ")
+    console.log(transactionRes)
+
     return transactionRes;
 }
 

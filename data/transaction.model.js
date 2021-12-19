@@ -82,6 +82,28 @@ Transaction.findAllByNumber = (number) => {
     })
 }
 
+Transaction.findAllByType = (type) => {
+    return new Promise(data => {
+        sql.query("SELECT account.id FROM account WHERE account.type = (?)", type, ((err, results) => {
+            if (err) throw err;
+            console.log("one vals")
+            console.log(results)
+            if (results.length === 0){
+                console.log("no results")
+                data([]);
+                return;
+            }
+
+            sql.query("SELECT number,date,amount,description FROM transaction WHERE id_source = ? OR id_destination = ?", [results[0].id, results[0].id], (err1, res1) => {
+                if (err1) throw err1;
+                console.log("resultf")
+                console.log(res1)
+                data(res1)
+            });
+        }))
+    })
+}
+
 Transaction.findAllBetweenDates = (date1, date2) => {
     return new Promise(data => {
         sql.query("SELECT * FROM transaction WHERE transaction.date BETWEEN ? AND ? ",[date1,date2],((err, results) => {

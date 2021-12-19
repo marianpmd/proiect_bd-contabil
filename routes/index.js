@@ -58,6 +58,43 @@ router.get('/find/transactions/byDate', function(req, res) {
         })
 });
 
+router.get('/find/transactions/byType', function(req, res) {
+
+    console.log(req.query.type);
+
+    transactionService.findAllByType(req.query.type)
+        .then(data=>{
+            res.render('view-transactions',{data : data})
+        })
+});
+
+router.get('/delete',function (req,res){
+    console.log(req.query.number1);
+
+    accountService.deleteByNumber(req.query.number1)
+        .then(data=>{
+            res.render('return-message',{data : "The entry has been deleted"})
+        })
+});
+
+router.get('/most-transactions',function (req,res){
+    accountService.getMostTransactions()
+        .then(data=>{
+            console.log("THE DATA TO RETURN");
+            console.log(data);
+            res.render("most-transactions-account",{data : data});
+        })
+});
+
+router.get('/total',function (req,res){
+    accountService.getAllBalances()
+        .then(data=>{
+            res.render('total-balances',{data:data})
+        })
+});
+
+
+
 
 router.get('/show/transactions', function(req, res) {
     res.render("show-transactions");
