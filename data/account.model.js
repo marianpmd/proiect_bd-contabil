@@ -91,8 +91,8 @@ Account.findMostTransactions = () => {
             console.log("FIND MOST : ");
 
             console.log(res);
-            res.forEach(id => {
-                const accountId = id.id;
+            res.forEach(accId => {
+                const accountId = accId.id;
 
                 console.log(accountId);
                 sql.query("SELECT COUNT(`transaction`.`id`) FROM `transaction` WHERE `transaction`.`id_source` = (?) OR `transaction`.`id_destination` = (?)", [accountId, accountId], (err1, res1) => {
