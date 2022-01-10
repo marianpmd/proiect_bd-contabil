@@ -99,10 +99,8 @@ Account.findMostTransactions = () => {
                     console.log("AFTER GETTING IDS")
                     console.log(res1)
 
-                    res1.forEach(count => {
-                        countMap.set(accountId, count['COUNT(`transaction`.`id`)']);
-                        /*countMap.push(count['COUNT(`transaction`.`id`)']);*/
-                    })
+                    countMap.set(accountId,res1['COUNT(`transaction`.`id`)']);
+
 
                     console.log("AFTER SAVING TO MAP");
                     console.log(countMap)
